@@ -1,5 +1,5 @@
 {
-  "name": "cannon-test",
+  "name": "owned-greeter",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,19 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjlescano/cannon-test.git"
+    "url": "git+https://github.com/mjlescano/owned-greetergit"
   },
   "author": "mjlescano",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/mjlescano/cannon-test/issues"
+    "url": "https://github.com/mjlescano/owned-greeterissues"
   },
-  "homepage": "https://github.com/mjlescano/cannon-test#readme",
+  "homepage": "https://github.com/mjlescano/owned-greeterreadme",
   "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@openzeppelin/contracts": "^4.8.2",
     "hardhat": "^2.13.0",
     "hardhat-cannon": "^2.1.7",
-    "solhint": "^3.4.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   }

@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-contract Greeter {
-    string public greeting = "Hello!";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-    function setGreeting(string memory _greeting) public {
+contract Greeter is Ownable {
+    string public greeting = "Hello world!";
+
+    function setGreeting(string memory _greeting) public onlyOwner {
         greeting = _greeting;
     }
 

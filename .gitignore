@@ -1,3 +1,5 @@
-artifacts
-cache
+.DS_Cache
+.vscode
+/artifacts
+/cache
 node_modules

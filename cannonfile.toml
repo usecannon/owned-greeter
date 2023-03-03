@@ -1,0 +1,17 @@
+name = "owned-greeter"
+version = "<%= package.version %>"
+description = "Simple project to verify the functionality of Cannon"
+keywords = ["sample", "greeter"]
+
+[setting.msg]
+defaultValue = "Hello world!"
+description="The greeting setted using setGreeting"
+
+[contract.Greeter]
+artifact = "Greeter"
+
+[invoke.setGreeting]
+target = ["Greeter"]
+func = "setGreeting"
+args = ["<%= settings.msg %>"]
+depends = ["contract.Greeter"]
