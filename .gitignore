@@ -1,4 +1,5 @@
 .DS_Cache
+.env
 .vscode
 /artifacts
 /cache
