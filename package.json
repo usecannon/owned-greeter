@@ -1,21 +1,21 @@
 {
   "name": "owned-greeter",
   "version": "0.0.1",
-  "description": "",
+  "description": "Simple solidity greeter project that can be owned, deployed using Cannon",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjlescano/owned-greetergit"
+    "url": "https://github.com/mjlescano/owned-greeter.git"
   },
   "author": "mjlescano",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/mjlescano/owned-greeterissues"
+    "url": "https://github.com/mjlescano/owned-greeter#issues"
   },
-  "homepage": "https://github.com/mjlescano/owned-greeterreadme",
+  "homepage": "https://github.com/mjlescano/owned-greeter",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.8.2",
     "hardhat": "^2.13.0",

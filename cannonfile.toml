@@ -1,7 +1,7 @@
 name = "owned-greeter"
 version = "<%= package.version %>"
-description = "Simple project to verify the functionality of Cannon"
-keywords = ["sample", "greeter"]
+description = "Simple greeter project that can be owned"
+keywords = ["sample", "greeter", "owned"]
 
 [setting.msg]
 defaultValue = "Hello world!"
