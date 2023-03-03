@@ -7,11 +7,16 @@ keywords = ["sample", "greeter", "owned"]
 defaultValue = "Hello world!"
 description="The greeting setted using setGreeting"
 
+[setting.owner]
+defaultValue = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+description="The wallet that be used to call Gretter.setGreeting()"
+
 [contract.Greeter]
 artifact = "Greeter"
 
 [invoke.setGreeting]
 target = ["Greeter"]
+from = "<%= settings.owner %>"
 func = "setGreeting"
 args = ["<%= settings.msg %>"]
 depends = ["contract.Greeter"]

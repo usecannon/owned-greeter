@@ -18,12 +18,10 @@
   "homepage": "https://github.com/mjlescano/owned-greeter",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.8.2",
+    "dotenv": "^16.0.3",
     "hardhat": "^2.13.0",
     "hardhat-cannon": "^2.1.7",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.3"
   }
 }
