@@ -4,13 +4,13 @@ pragma solidity ^0.8.0;
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Greeter is Ownable {
-    string public greeting = "Hello world!";
+    mapping(uint => string) public greetings;
 
-    function setGreeting(string memory _greeting) public onlyOwner {
-        greeting = _greeting;
+    function setGreeting(uint _index, string memory _greeting) public onlyOwner {
+        greetings[_index] = _greeting;
     }
 
-    function greet() public view returns (string memory) {
-        return greeting;
+    function greet(uint _index) public view returns (string memory) {
+        return greetings[_index];
     }
 }
