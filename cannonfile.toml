@@ -22,12 +22,12 @@ artifact = "Greeter"
 target = ["Greeter"]
 from = "<%= settings.owner %>"
 func = "setGreeting"
-args = ["1", "<%= settings.msg %>"]
+args = ["1", "<%= settings.msgOne %>"]
 depends = ["contract.Greeter"]
 
 [invoke.setGreetingTwo]
 target = ["Greeter"]
 from = "<%= settings.owner %>"
 func = "setGreeting"
-args = ["2", "<%= settings.msg %>"]
+args = ["2", "<%= settings.msgTwo %>"]
 depends = ["contract.Greeter"]
