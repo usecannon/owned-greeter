@@ -1,0 +1,8 @@
+name = "owned-greeter"
+version = "<%= package.version %>"
+description = "Simple greeter project that can be owned"
+include = ["cannonfile.toml"]
+
+[setting.initialOwner]
+defaultValue = "0x48914229deDd5A9922f44441ffCCfC2Cb7856Ee9"
+description = "The wallet that be used to call Gretter.setGreeting()"
