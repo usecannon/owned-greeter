@@ -3,31 +3,21 @@ version = "<%= package.version %>"
 description = "Simple greeter project that can be owned"
 keywords = ["sample", "greeter", "owned"]
 
+[setting.initialOwner]
+defaultValue = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+description = "The wallet that be used to call Gretter.setGreeting()"
+
 [setting.msgOne]
 defaultValue = "Hello world!"
-description="The first greeting setted using setGreeting"
-
-[setting.msgTwo]
-defaultValue = "Hola Mundo!"
-description="The second greeting setted using setGreeting"
-
-[setting.owner]
-defaultValue = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
-description="The wallet that be used to call Gretter.setGreeting()"
+description = "The first greeting setted using setGreeting"
 
 [contract.Greeter]
 artifact = "Greeter"
+args = ["<%= settings.initialOwner %>"]
 
 [invoke.setGreetingOne]
 target = ["Greeter"]
-from = "<%= settings.owner %>"
+from = "<%= settings.initialOwner %>"
 func = "setGreeting"
 args = ["1", "<%= settings.msgOne %>"]
-depends = ["contract.Greeter"]
-
-[invoke.setGreetingTwo]
-target = ["Greeter"]
-from = "<%= settings.owner %>"
-func = "setGreeting"
-args = ["2", "<%= settings.msgTwo %>"]
 depends = ["contract.Greeter"]
