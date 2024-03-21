@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+contract Greeter {
+    mapping(address => string) public greetings;
 
-contract Greeter is Ownable {
-    mapping(uint256 => string) public greetings;
-
-    constructor(address _initialOwner) Ownable(_initialOwner) {}
-
-    function setGreeting(uint256 _index, string memory _greeting) public onlyOwner {
-        greetings[_index] = _greeting;
+    function setGreeting(string memory _greeting) public {
+        greetings[msg.sender] = _greeting;
     }
 
-    function greet(uint256 _index) public view returns (string memory) {
-        return greetings[_index];
+    function greet() public view returns (string memory) {
+        return greetings[msg.sender];
+    }
+
+    function greet(address _user) public view returns (string memory) {
+        return greetings[_user];
     }
 }
