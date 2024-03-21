@@ -1,5 +1,5 @@
 [profile.default]
 solc = "0.8.20"
 remappings = [
-  "@openzeppelin/contracts=node_modules/@openzeppelin/contracts/"
+  "@openzeppelin/contracts=node_modules/@openzeppelin/contracts/",
 ]
