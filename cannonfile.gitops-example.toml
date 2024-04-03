@@ -1,7 +1,7 @@
 # example file to be used for testing out gitops txs,
 # DO NOT PUBLISH TO THE REGISTRY
 
-version = "<%= package.version %>"
+version = "0.0.6"
 include = ["cannonfile.toml"]
 
 [invoke.setGreeting]
