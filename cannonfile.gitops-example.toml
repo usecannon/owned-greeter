@@ -1,0 +1,10 @@
+# example file to be used for testing out gitops txs,
+# DO NOT PUBLISH TO THE REGISTRY
+
+version = "<%= package.version %>"
+include = ["cannonfile.toml"]
+
+[invoke.setGreeting]
+target = ["Greeter"]
+func = "setGreeting"
+args = ["some-new-greet"]
