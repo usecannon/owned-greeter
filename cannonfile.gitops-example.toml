@@ -7,4 +7,4 @@ include = ["cannonfile.toml"]
 [invoke.setGreeting]
 target = ["Greeter"]
 func = "setGreeting"
-args = ["some-new-greet-updated"]
+args = ["some-new-greet-updated-again"]
