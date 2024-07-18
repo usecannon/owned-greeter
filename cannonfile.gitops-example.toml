@@ -4,6 +4,13 @@
 version = "0.0.6"
 include = ["cannonfile.toml"]
 
+[setting.owner]
+defaultValue = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+
+[contract.Greeter2]
+artifact = "Greeter"
+from = "<%= settings.owner %>"
+
 [invoke.setGreeting]
 target = ["Greeter"]
 func = "setGreeting"
