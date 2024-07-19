@@ -1,6 +1,6 @@
 {
   "name": "owned-greeter",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple solidity greeter project that can be owned, deployed using Cannon",
   "main": "index.js",
   "scripts": {

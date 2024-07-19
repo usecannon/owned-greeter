@@ -9,3 +9,7 @@ defaultValue = "owned-greeter"
 [contract.Greeter]
 artifact = "Greeter"
 salt = "<%= settings.salt %>"
+
+[contract.ExampleContract]
+artifact = "ExampleContract"
+salt = "<%= settings.salt %>"
