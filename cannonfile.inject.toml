@@ -6,11 +6,10 @@ preset = "inject"
 [setting.salt]
 defaultValue = "owned-greeter"
 
-[contract.Greeter]
-artifact = "Greeter"
-salt = "<%= settings.salt %>"
+[pull.ownedGreeter]
+source = "owned-greeter:0.0.6"
 
 [invoke.setGreeting]
-target = ["Greeter"]
+target = ["ownedGreeter.Greeter"]
 func = "setGreeting"
 args = ["<%= console.log('injected greeting') || 'new greeting' %>"]
