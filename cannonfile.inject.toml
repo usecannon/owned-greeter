@@ -1,0 +1,16 @@
+name = "owned-greeter"
+version = "<%= package.version %>"
+description = "Simple greeter project that can be owned"
+preset = "inject"
+
+[setting.salt]
+defaultValue = "owned-greeter"
+
+[contract.Greeter]
+artifact = "Greeter"
+salt = "<%= settings.salt %>"
+
+[invoke.setGreeting]
+target = ["Greeter"]
+func = "setGreeting"
+args = ["<%= console.log('injected greeting') || 'new greeting' %>"]
