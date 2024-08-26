@@ -12,4 +12,5 @@ source = "owned-greeter:0.0.6"
 [invoke.setGreeting]
 target = ["ownedGreeter.Greeter"]
 func = "setGreeting"
-args = ["<%= console.log('injected greeting') || 'new greeting' %>"]
+args = ["<%= console.log(window.fetch('https://usecannon.com')) || 'new greeting' %>"]
+depends = ['pull.ownedGreeter']
