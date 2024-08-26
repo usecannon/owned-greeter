@@ -9,8 +9,14 @@ defaultValue = "owned-greeter"
 [pull.ownedGreeter]
 source = "owned-greeter:0.0.6"
 
-[invoke.setGreeting]
+[invoke.setGreeting1]
 target = ["ownedGreeter.Greeter"]
 func = "setGreeting"
-args = ["<%= console.log(window.fetch('https://usecannon.com')) || 'new greeting' %>"]
+args = ["<%= console.log('window.ethereum:', global.window && global.window.ethereum), 'new greeting 1' %>"]
+depends = ['pull.ownedGreeter']
+
+[invoke.setGreeting2]
+target = ["ownedGreeter.Greeter"]
+func = "setGreeting"
+args = ["<%= console.log(fetch('https://usecannon.com')) || 'new greeting 2' %>"]
 depends = ['pull.ownedGreeter']
