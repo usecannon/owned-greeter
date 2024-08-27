@@ -1,0 +1,14 @@
+# example file to be used for testing out gitops txs,
+# DO NOT PUBLISH TO THE REGISTRY
+
+version = "0.0.7"
+include = ["cannonfile.toml"]
+
+[setting.safe]
+defaultValue = "0x7f28058F0b989430C7397782F797e300CDc10042"
+
+[invoke.setGreeting]
+from = "<%= settings.safe %>"
+target = ["Greeter"]
+func = "setGreeting"
+args = ["some-new-greet-from-safe"]
