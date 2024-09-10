@@ -1,15 +1,11 @@
 # example file to be used for testing out gitops txs,
 # DO NOT PUBLISH TO THE REGISTRY
 
-version = "0.0.6"
+version = "0.0.7"
 include = ["cannonfile.toml"]
 
 [setting.owner]
-defaultValue = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
-
-[contract.Greeter2]
-artifact = "Greeter"
-from = "<%= settings.owner %>"
+defaultValue = "0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"
 
 [invoke.setGreeting]
 target = ["Greeter"]
