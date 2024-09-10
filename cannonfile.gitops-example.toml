@@ -4,10 +4,7 @@
 version = "0.0.7"
 include = ["cannonfile.toml"]
 
-[setting.owner]
-defaultValue = "0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"
-
 [invoke.setGreeting]
 target = ["Greeter"]
 func = "setGreeting"
-args = ["some-new-greet"]
+args = ["another-greet-0.0.7"]
