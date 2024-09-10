@@ -6,7 +6,7 @@ version = "0.0.2"
 preset = "pull"
 
 [setting.greeting]
-defaultValue = "some-greet"
+defaultValue = "some-greet-update"
 
 [pull.greeter]
 source = "owned-greeter"
