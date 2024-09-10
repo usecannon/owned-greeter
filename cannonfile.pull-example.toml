@@ -1,7 +1,12 @@
 # example file to be used for testing out gitops txs,
 # DO NOT PUBLISH TO THE REGISTRY
 
+name = "owned-greeter"
 version = "0.0.1"
+preset = "pull"
+
+[setting.greeting]
+defaultValue = "some-greet"
 
 [pull.greeter]
 source = "owned-greeter"
@@ -9,4 +14,4 @@ source = "owned-greeter"
 [invoke.setGreeting]
 target = ["greeter.Greeter"]
 func = "setGreeting"
-args = ["some-greet"]
+args = ["<%= settings.greeting %>"]
