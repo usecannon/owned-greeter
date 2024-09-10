@@ -2,7 +2,7 @@
 # DO NOT PUBLISH TO THE REGISTRY
 
 name = "owned-greeter"
-version = "0.0.1"
+version = "0.0.2"
 preset = "pull"
 
 [setting.greeting]
