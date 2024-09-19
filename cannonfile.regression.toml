@@ -7,6 +7,6 @@ preset = "regre"
 [setting.salt]
 defaultValue = "owned-greeter-regression"
 
-[contract.Greeter]
-artifact = "Greeter"
-salt = "<%= settings.salt %>"
+[clone.greeter]
+source = "owned-greeter:latest@main"
+target = "owned-greeter:0.0.1@regre-code"
