@@ -1,0 +1,12 @@
+name = "owned-greeter"
+version = "0.0.1"
+description = "Simple greeter project that can be owned"
+keywords = ["sample", "greeter", "owned"]
+preset = "regre"
+
+[setting.salt]
+defaultValue = "owned-greeter-regression"
+
+[contract.Greeter]
+artifact = "Greeter"
+salt = "<%= settings.salt %>"
