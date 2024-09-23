@@ -1,0 +1,18 @@
+name = "owned-greeter"
+version = "0.0.0"
+description = "Simple greeter project that can be owned"
+keywords = ["sample", "greeter", "owned"]
+preset = "testing"
+
+[setting.salt]
+defaultValue = "owned-greeter-testing-2"
+
+[clone.greeter]
+source = "owned-greeter"
+target = "owned-greeter:0.0.0@with-testing"
+options.salt = "<%= settings.salt %>"
+
+[invoke.setGreeting]
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["example greet"]
