@@ -12,6 +12,11 @@ salt = "owned-greeter"
 source = "owned-greeter:latest@main"
 target = "owned-greeter:0.0.1@compat-clone"
 
+[invoke.setGreeting]
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["test-safe-steps"]
+
 [deploy.Greeter]
 artifact = "Greeter"
 salt = "<%= settings.salt %>"
