@@ -16,6 +16,7 @@ target = "owned-greeter:0.0.1@compat-clone"
 target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["test-safe-steps"]
+from = "0xfD050037C9039cE7b4A3213E3645BC1ba6eA0c97"
 
 [deploy.Greeter]
 artifact = "Greeter"
