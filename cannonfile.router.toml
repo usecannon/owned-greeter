@@ -1,7 +1,10 @@
+name = "owned-greeter"
+deployers = ["0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"]
 version = "0.0.1"
 preset = "router"
 
-include = ["cannonfile.toml"]
+[pull.greeter]
+source = "owned-greeter"
 
 [router.Router]
-contracts = ["Greeter"]
+contracts = ["greeter.Greeter"]
