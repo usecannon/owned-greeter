@@ -1,10 +1,16 @@
 name = "owned-greeter"
-deployers = ["0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"]
 version = "0.0.1"
 preset = "router"
+deployers = ["0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3", "0x7f28058F0b989430C7397782F797e300CDc10042"]
 
 [pull.greeter]
 source = "owned-greeter"
 
 [router.Router]
 contracts = ["greeter.Greeter"]
+
+[invoke.setGreeting]
+target = ["Router"]
+from = "0x7f28058F0b989430C7397782F797e300CDc10042"
+func = "setGreeting"
+args = ["router hello"]
