@@ -8,5 +8,5 @@ deployers = ["0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"]
 defaultValue = "owned-greeter"
 
 [contract.Greeter]
-artifact = "Greeter"
+artifact = "src/Greeter.sol:Greeter"
 salt = "<%= settings.salt %>"
