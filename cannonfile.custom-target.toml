@@ -1,0 +1,16 @@
+name = "owned-greeter"
+version = "0.0.1"
+description = "Simple greeter project that can be owned"
+keywords = ["sample", "greeter", "owned"]
+preset = "custom-target"
+
+[var.settings]
+customTarget = "0xa83114a443da1cecefc50368531cace9f37fcccb"
+owner = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+
+[invoke.setGreeting]
+target = ["<%= settings.customTarget %>"]
+from = "<%= settings.owner %>"
+abi = '[{"type":"function","name":"setGreeting","inputs":[{"name":"_greeting","type":"string","internalType":"string"}],"outputs":[],"stateMutability":"nonpayable"}]'
+func = "setGreeting"
+args = ["example greet"]

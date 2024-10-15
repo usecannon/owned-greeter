@@ -1,0 +1,7 @@
+version = "0.0.1"
+preset = "router"
+
+include = ["cannonfile.toml"]
+
+[router.Router]
+contracts = ["Greeter"]
