@@ -1,0 +1,11 @@
+name = "owned-greeter"
+version = "0.0.2"
+description = "Simple greeter project that can be owned"
+keywords = ["sample", "greeter", "owned"]
+deployers = ["0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"]
+preset = "clone-b"
+
+[clone.greeter]
+source = "owned-greeter:latest@main"
+target = "owned-greeter:0.0.1@clone-clone"
+options.salt = "owned-greeter-clone-b"
