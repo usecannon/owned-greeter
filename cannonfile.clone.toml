@@ -1,5 +1,5 @@
 name = "owned-greeter"
-version = "0.0.3"
+version = "0.0.4"
 description = "Simple greeter project that can be owned"
 keywords = ["sample", "greeter", "owned"]
 deployers = ["0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"]
