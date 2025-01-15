@@ -1,22 +1,46 @@
 name = "owned-greeter"
-version = "<%= package.version %>"
+version = "0.0.0"
 description = "Simple greeter project that can be owned"
 preset = "inject"
 
-[setting.salt]
-defaultValue = "owned-greeter"
+# [setting.salt]
+# defaultValue = "owned-greeter"
 
-[pull.ownedGreeter]
-source = "owned-greeter:0.0.6"
+# [pull.ownedGreeter]
+# source = "owned-greeter:0.0.8@main"
 
-[invoke.setGreeting1]
-target = ["ownedGreeter.Greeter"]
+# [invoke.setGreeting1]
+# target = ["ownedGreeter.Greeter"]
+# func = "setGreeting"
+# args = ["<%= console.log(process.env), 'new greeting 1' %>"]
+# depends = ['pull.ownedGreeter']
+
+# [invoke.setGreeting2]
+# target = ["ownedGreeter.Greeter"]
+# func = "setGreeting"
+# args = ["<%= console.log(fetch('https://usecannon.com')) || 'new greeting 2' %>"]
+# depends = ['pull.ownedGreeter']
+
+[deploy.Greeter]
+artifact = "src/Greeter.sol:Greeter"
+
+[deploy.Proxy]
+artifact = "src/Greeter.sol:Greeter"
+
+[invoke.setGreeting]
+target = ["Greeter"]
 func = "setGreeting"
-args = ["<%= console.log('window.ethereum:', global.window && global.window.ethereum), 'new greeting 1' %>"]
-depends = ['pull.ownedGreeter']
-
-[invoke.setGreeting2]
-target = ["ownedGreeter.Greeter"]
-func = "setGreeting"
-args = ["<%= console.log(fetch('https://usecannon.com')) || 'new greeting 2' %>"]
-depends = ['pull.ownedGreeter']
+# args = ["<%= zeroAddress %>"]
+# args = ["<%= 'new greeting' %>"]
+# args = ["<%= process.exit(1) %>"]
+# args = ["<%= globalThis %>"]
+# args = ["<%= Proxy.address %>"]
+# args = ["<%= console.log(Proxy), 'new greeting' %>"]
+# args = ["<%= chainId %>-<%= timestamp %>"]
+# args = ["<%= console.log('!!!', require), 'new greeting' %>"]
+# args = ["<%= console.log('!!!', ({}.__proto__)), 'new greeting' %>"]
+# args = ["<%= console.log('!!!', this), 'new greeting' %>"]
+# args = ["<%= console.log(Object.assign(contracts.Greeter, {address: '0x123'})), 'new greeting' %>"]
+# args = ["<%= console.log(Object.defineProperty(Number, 'now', { get () { return '0x123' } })), 'new greeting' %>"]
+args = ["<%= fetch('http://google.com'), 'new greeting' %>"]
+depends = ['deploy.Greeter']
