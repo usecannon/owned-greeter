@@ -1,8 +1,8 @@
 name = "owned-greeter"
-version = "0.0.1"
+version = "0.0.0"
 description = "Simple greeter project that can be owned"
 keywords = ["sample", "greeter", "owned"]
-deployers = ["0x7f28058F0b989430C7397782F797e300CDc10042", "0x3852C9fdc6a5C0A4A6230c1d2d954ccCB9b90465"]
+# deployers = ["0x7f28058F0b989430C7397782F797e300CDc10042", "0x3852C9fdc6a5C0A4A6230c1d2d954ccCB9b90465"]
 preset = "clone"
 
 [clone.greeter]
@@ -10,8 +10,8 @@ source = "owned-greeter:latest@main"
 target = "owned-greeter:0.0.1@clone-clone-d"
 options.salt = "owned-greeter-clone-d"
 
-[invoke.setGreeting]
-from = "0x7f28058F0b989430C7397782F797e300CDc10042"
-target = ["greeter.Greeter"]
-func = "setGreeting"
-args = ["example greet"]
+# [invoke.setGreeting]
+# from = "0x7f28058F0b989430C7397782F797e300CDc10042"
+# target = ["greeter.Greeter"]
+# func = "setGreeting"
+# args = ["example greet"]
