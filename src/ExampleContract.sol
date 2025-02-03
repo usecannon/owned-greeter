@@ -20,4 +20,23 @@ contract ExampleContract {
       counter = counter + firstParameter;
       return secondParameter[0];
     }
+
+    function exampleNestedArray(
+        uint256[][] memory values
+    ) external pure returns (uint256[][] memory result) {
+        // Create a new array with same dimensions
+        result = new uint256[][](values.length);
+
+        // Iterate through outer array
+        for (uint i = 0; i < values.length; i++) {
+            result[i] = new uint256[](values[i].length);
+            // Iterate through inner array
+            for (uint j = 0; j < values[i].length; j++) {
+                // Add 1 to each value
+                result[i][j] = values[i][j] + 1;
+            }
+        }
+
+        return result;
+    }
 }
